@@ -1,35 +1,41 @@
-# Not::Analytics::Client
+# not Analytics Client
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/not/analytics/client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A client for [not Analytics](https://github.com/12joan/not-analytics).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'not-analytics-client'
+gem 'not-analytics-client', github: '12joan/not-analytics-client', branch: 'main'
 ```
 
 And then execute:
 
     $ bundle install
 
-Or install it yourself as:
-
-    $ gem install not-analytics-client
-
 ## Usage
 
-TODO: Write usage instructions here
+Instantiate a new Hit object for a given app ID.
 
-## Development
+```ruby
+hit = NotAnalyticsClient::Hit.new(
+  app_id,
+  event: '/some/path', # Optional
+  key: app_key, # Optional
+)
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Send the Hit to a not Analytics server.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+hit.post!(not_analytics_url: 'https://hit.example.com/')
+# => #<Net::HTTPOK 200 OK readbody=true>
+```
 
-## Contributing
+Or output the JSON payload.
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/not-analytics-client.
+```ruby
+hit.payload
+# => "{\"hit\":{\"app_id\":"...
+```
