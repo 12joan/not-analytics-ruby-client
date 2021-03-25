@@ -20,7 +20,7 @@ Instantiate a new Hit object for a given app ID.
 
 ```ruby
 hit = NotAnalyticsClient::Hit.new(
-  app_id,
+  app_id: app_id,
   event: '/some/path', # Optional
   key: app_key, # Optional
 )
