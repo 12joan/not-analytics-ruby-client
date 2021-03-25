@@ -1,0 +1,27 @@
+PATH
+  remote: .
+  specs:
+    not-analytics-client (0.1.0)
+      base64 (~> 0.1)
+      json (~> 2.5)
+      openssl (~> 2.2)
+      securerandom (~> 0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    base64 (0.1.0)
+    json (2.5.1)
+    openssl (2.2.0)
+    rake (13.0.3)
+    securerandom (0.1.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  not-analytics-client!
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.2.3
