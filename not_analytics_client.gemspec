@@ -3,13 +3,13 @@
 require_relative 'lib/not_analytics_client/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'not-analytics-client'
+  spec.name          = 'not_analytics_client'
   spec.version       = NotAnalyticsClient::VERSION
   spec.authors       = ['Joe Anderson']
   spec.email         = ['joe@osbert.me']
 
   spec.summary       = 'Client for not-analytics'
-  spec.homepage      = 'https://github.com/12joan/not-analytics-client'
+  spec.homepage      = 'https://github.com/12joan/not_analytics_client'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
   spec.metadata['homepage_uri'] = spec.homepage
