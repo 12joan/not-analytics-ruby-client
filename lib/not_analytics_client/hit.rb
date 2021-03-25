@@ -2,6 +2,7 @@
 
 require 'json'
 require 'securerandom'
+require 'net/http'
 
 module NotAnalyticsClient
   class Hit
@@ -19,6 +20,21 @@ module NotAnalyticsClient
           **auth_params,
         }
       }.to_json
+    end
+
+    def post!(not_analytics_url:)
+      uri = URI(not_analytics_url)
+
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = uri.scheme == 'https'
+      
+      request = Net::HTTP::Post.new(uri.request_uri, {
+        'Content-Type' => 'application/json'
+      })
+
+      request.body = payload
+
+      http.request(request)
     end
 
     private

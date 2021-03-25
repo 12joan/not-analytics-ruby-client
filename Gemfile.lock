@@ -1,9 +1,10 @@
 PATH
   remote: .
   specs:
-    not_analytics_client (0.1.0)
+    not_analytics_client (0.2.0)
       base64 (~> 0.1)
       json (~> 2.5)
+      net-http (~> 0.1.1)
       openssl (~> 2.2)
       securerandom (~> 0.1)
 
@@ -11,10 +12,19 @@ GEM
   remote: https://rubygems.org/
   specs:
     base64 (0.1.0)
+    io-wait (0.1.0)
     json (2.5.1)
+    net-http (0.1.1)
+      net-protocol
+      uri
+    net-protocol (0.1.0)
+      io-wait
+      timeout
     openssl (2.2.0)
     rake (13.0.3)
     securerandom (0.1.0)
+    timeout (0.1.1)
+    uri (0.10.1)
 
 PLATFORMS
   x86_64-linux

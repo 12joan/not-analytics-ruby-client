@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'base64', '~> 0.1'
   spec.add_dependency 'json', '~> 2.5'
   spec.add_dependency 'securerandom', '~> 0.1'
+  spec.add_dependency 'net-http', '~> 0.1.1'
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
