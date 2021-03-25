@@ -13,9 +13,11 @@ module NotAnalyticsClient
 
     def payload
       {
-        app_id: @app_id,
-        event: @event,
-        **auth_params,
+        hit: {
+          app_id: @app_id,
+          event: @event,
+          **auth_params,
+        }
       }.to_json
     end
 
