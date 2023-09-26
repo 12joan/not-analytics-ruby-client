@@ -7,7 +7,7 @@ A Ruby client for [not Analytics](https://github.com/12joan/not-analytics).
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'not-analytics-client', github: '12joan/not-analytics-client', branch: 'main'
+gem 'not-analytics-client', github: '12joan/not-analytics-ruby-client', branch: 'main'
 ```
 
 And then execute:
