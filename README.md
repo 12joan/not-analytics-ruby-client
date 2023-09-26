@@ -1,6 +1,6 @@
-# not Analytics Client
+# not Analytics Ruby Client
 
-A client for [not Analytics](https://github.com/12joan/not-analytics).
+A Ruby client for [not Analytics](https://github.com/12joan/not-analytics).
 
 ## Installation
 
